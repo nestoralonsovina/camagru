@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 
 
-include_once('header.php'); ?>
+include_once('inc/header.php'); ?>
 
 hello pepe
 
-<?php include_once('footer.php') ?>
+<?php include_once('inc/footer.php') ?>
