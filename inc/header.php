@@ -20,8 +20,8 @@
 <section class="hero-head">
 	<div class="columns is-mobile is-marginless heading has-text-weight-bold">
 		<div class="column left">
-			<figure class="image is-square">
-				<img src="assets/camagru-logo.svg" alt="Logo">
+			<figure class="image is-128x128">
+				<img src="/assets/camagru-logo.svg" alt="Logo">
 			</figure>
 			<p class="navbar-item"> | Camagru</p>
 		</div>
