@@ -10,7 +10,7 @@ abstract class Controller
      * This function expects the name of a model to charge.
      * The model is a class in charge of managing all the data of a
      * specific genre..
-     * @param $model name of the model to load
+     * @param $model string name of the model to load
      * @return mixed model to laod
      */
     public function model($model)
@@ -27,7 +27,7 @@ abstract class Controller
      * You have the option to pass an array of data from the controller
      * which can then be accessed on the .php file assigned. A good example
      * of this behaviour is the Pages.php controller and it's corresponding view.
-     * @param $view name of the view to load
+     * @param string $view name of the view to load
      * @param array $data
      */
     public function view($view, array $data = [])
@@ -37,7 +37,7 @@ abstract class Controller
             require_once '../app/views/' . $view . '.php';
         } else {
             // View does not exist
-            die('View does not exist');
+            die('View does not exist:' . '../app/views/' . $view . '.php');
         }
     }
 }

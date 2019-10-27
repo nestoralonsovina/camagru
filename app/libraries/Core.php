@@ -8,7 +8,7 @@
  */
 class Core
 {
-    protected $currentController = 'Pages';
+    protected $currentController = 'Galleries';
     protected $currentMethod = 'index';
     protected $params = [];
 
