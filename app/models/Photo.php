@@ -51,6 +51,9 @@ class Photo
         if ($limited) {
             $this->db->bind(':amount', $amount);
         }
+        if ($type == Photo::FROM_USER) {
+            $this->db->bind(':user_id', $user_id);
+        }
         return $this->db->resultSet();
     }
 }

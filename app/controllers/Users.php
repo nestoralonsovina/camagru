@@ -3,10 +3,12 @@
 class Users extends Controller
 {
     private $userModel;
+    private $photoModel;
 
     public function __construct()
     {
         $this->userModel = $this->model('User');
+        $this->photoModel = $this->model('Photo');
     }
 
     public function index() {
@@ -115,6 +117,16 @@ class Users extends Controller
         unset($_SESSION['user_name']);
         session_destroy();
         redirect('users/login');
+    }
+
+    public function profile($id) {
+
+        $data = [
+            'photos' => $this->photoModel->getPhotos(Photo::ALL_PHOTOS, Photo::FROM_USER, $id),
+            'id' => $id
+        ];
+
+        $this->view('users/profile', $data);
     }
 
     private function createUserSession($user) {

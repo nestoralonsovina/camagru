@@ -25,7 +25,7 @@
                         </a>
                     </li>
                     <li class="nav-item active mr-2">
-                        <a class="nav-link" href="<?php URLROOT ?>/users/profile">
+                        <a class="nav-link" href="<?php URLROOT ?>/users/profile/<?php echo $_SESSION['user_id'] ?>">
                             <i class="fa fa-user"></i>
                         </a>
                     </li>

@@ -9,6 +9,9 @@ require APPROOT . '/views/inc/header.php'; ?>
 
     <main class="container">
         <h1 class="text-center m-5">CAMERA</h1>
+        <div class="row justify-content-center" id="alerts">
+
+        </div>
         <div class="row justify-content-center">
             <div class="video-wrap text-center">
                 <video id="video" playsinline autoplay></video>

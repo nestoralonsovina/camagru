@@ -39,6 +39,12 @@ function deleteCanvas() {
     video.style.display = 'block'
 }
 
+function showAlert(status, msg, el) {
+    el.innerHTML = ' <div class="alert alert-' + status +'">\n' +
+        '                <strong>Photo Posted!</strong>\n' +
+        '            </div>';
+}
+
 /*
 	PHOTO MANAGEMENT
  */
@@ -139,7 +145,10 @@ saveButton.addEventListener('click', (e) => {
             .then(response => response.json())
             .then(data => {
                 deleteCanvas();
-                console.log("Success" + data);
+                showAlert('success', 'Photo posted', document.getElementById('alerts'));
+                setTimeout(() => {
+                    document.getElementById('alerts').innerHTML = '';
+                }, 1000)
             })
             .catch(error => console.error(error));
     }

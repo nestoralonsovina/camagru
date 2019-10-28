@@ -1,12 +1,8 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
-<?php
-$fileList = glob(APPROOT . '/../data/images/*');
-?>
 
-<main class="container">
-
-    <h1 class="font-weight-light text-center mt-4 mb-0 text-center">Gallery</h1>
+<div class="container">
+    <h1 class="font-weight-light text-center mt-4 mb-0 text-center"><?php echo $_SESSION['user_name'] ?></h1>
 
     <hr class="mt-2 mb-5">
 
@@ -25,6 +21,6 @@ $fileList = glob(APPROOT . '/../data/images/*');
             </div>
         <?php endforeach; ?>
     </div>
-</main>
+</div>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
