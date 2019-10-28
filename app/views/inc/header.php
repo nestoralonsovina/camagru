@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <?php if (isset($css_files)): ?>
+        <?php foreach ($css_files as $file): ?>
+            <link rel="stylesheet" href="/css/<?php echo $file ?>">
+        <?php endforeach; ?>
+    <?php endif; ?>
+    <link rel="stylesheet" href="/css/helpers.css">
 </head>
 <body>
 

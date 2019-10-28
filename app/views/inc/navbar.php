@@ -11,7 +11,7 @@
             <ul class="navbar-nav mr-0">
                 <?php if (isLoggedIn() == false): ?>
                     <li class="nav-item active">
-                    <a class="nav-link" href="<?php URLROOT ?>/users/login">Login</a>
+                        <a class="nav-link" href="<?php URLROOT ?>/users/login">Login</a>
                     </li>
                 <?php else: ?>
                     <li class="nav-item active mr-2">

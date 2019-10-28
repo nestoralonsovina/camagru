@@ -35,6 +35,14 @@ class User {
         return false;
     }
 
+    public function getUserById($user_id) {
+        $sql = 'SELECT * FROM users WHERE id = :user_id';
+        $this->db->query($sql);
+        $this->db->bind(':user_id', $user_id);
+
+        return $this->db->single();
+    }
+
     public function login($email, $password) {
         $this->db->query('SELECT * FROM users WHERE email = :email');
         $this->db->bind(':email', $email);

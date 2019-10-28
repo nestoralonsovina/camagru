@@ -1,0 +1,46 @@
+#snap {
+    margin: 20px;
+}
+
+#canvas, #discard, #savePhoto {
+    display: none;
+}
+
+.is-relative {
+    position: relative;
+}
+
+video {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#controlCenter {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+#controlCenter>button {
+    width: 100%;
+}
+
+#stickers {
+    overflow: auto;
+}
+
+#editor {
+    width: 100%;
+}
+
+.sticker:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: lightgrey;
+}
+
+.selected-sticker {
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: lightgrey;
+}

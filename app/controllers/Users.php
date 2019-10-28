@@ -9,6 +9,10 @@ class Users extends Controller
         $this->userModel = $this->model('User');
     }
 
+    public function index() {
+        redirect('');
+    }
+
     public function register()
     {
         // Prepare the data array to the User view
@@ -113,7 +117,7 @@ class Users extends Controller
         redirect('users/login');
     }
 
-    public function createUserSession($user) {
+    private function createUserSession($user) {
         $_SESSION['user_id'] = $user->id;
         $_SESSION['user_email'] = $user->email;
         $_SESSION['user_name'] = $user->username;
