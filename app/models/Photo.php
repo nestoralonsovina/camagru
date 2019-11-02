@@ -27,6 +27,15 @@ class Photo
         return $this->db->execute();
     }
 
+    public function getPhotoById($id) {
+        $sql = 'SELECT * FROM photos WHERE photos.id = :id';
+        $this->db->query($sql);
+        $this->db->bind(':id', $id);
+
+        return $this->db->single();
+    }
+
+
     public function getPhotos($amount, $type, $user_id = null) {
         $sql = '';
         $limited = $amount == Photo::ALL_PHOTOS ? false : true;

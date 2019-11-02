@@ -17,7 +17,7 @@ require APPROOT . '/views/inc/header.php'; ?>
                 <video id="video" playsinline autoplay></video>
                 <div class="is-relative">
                     <canvas id="canvas" width="640" height="480"></canvas>
-                    <div  id="controlCenter">
+                    <div id="controlCenter">
                         <button id="savePhoto" class="btn btn-warning mt-3">
                             <i class="fa fa-floppy-o" aria-hidden="true"></i>
                         </button>
@@ -38,7 +38,7 @@ require APPROOT . '/views/inc/header.php'; ?>
                 <label for="upload-photo" class="btn btn-info m-0">
                     <i class="fa fa-upload" aria-hidden="true"></i>
                 </label>
-                <input type="file" name="upload-photo" id="upload-photo" style="display: none;">
+                <input type="file" name="upload-photo" id="upload-photo" style="display: none;" accept="image/*">
             </div>
         </div>
 

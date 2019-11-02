@@ -120,10 +120,9 @@ class Users extends Controller
     }
 
     public function profile($id) {
-
         $data = [
-            'photos' => $this->photoModel->getPhotos(Photo::ALL_PHOTOS, Photo::FROM_USER, $id),
-            'id' => $id
+            'photos' => array_reverse($this->photoModel->getPhotos(Photo::ALL_PHOTOS, Photo::FROM_USER, $id)),
+            'user' => $this->userModel->getUserById($id)
         ];
 
         $this->view('users/profile', $data);

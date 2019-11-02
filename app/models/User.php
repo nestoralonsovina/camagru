@@ -21,7 +21,6 @@ class User {
     }
 
     public function findUserByEmail($email) {
-
         $sql = 'SELECT *  FROM users WHERE email = :email';
         $this->db->query($sql);
         $this->db->bind(':email', $email);

@@ -3,10 +3,12 @@
 class Photos extends Controller
 {
     private $photoModel;
+    private $userModel;
 
     public function __construct()
     {
         $this->photoModel = $this->model('Photo');
+        $this->userModel = $this->model('User');
     }
 
     public function camera() {
@@ -46,6 +48,13 @@ class Photos extends Controller
         }
     }
 
+    public function edit($id) {
+        $data['photo'] = $this->photoModel->getPhotoById($id);
+        $data['user'] = $this->userModel->getUserById($data['photo']->user_id);
+
+        $this->view('photos/edit', $data);
+    }
+
     private function decodePhoto($data) {
         // take out the encoding information
         $img = $data->photoBase64;
@@ -55,7 +64,4 @@ class Photos extends Controller
         // decode base64 image
         return base64_decode($img);
     }
-
-
-
 }
